@@ -23,7 +23,7 @@ const logDeath = (winner, loser) => {
 //6
 const isDead = (health) => health <= 0;
 //7
-function fight(player1, player2, playerHealth, player2Health) {
+function fight(player1, player2, player1Health, player2Health) {
   while (true) {
     let attacker = chooseOption(player1, player2);
     if (attacker === player1) {
@@ -34,7 +34,7 @@ function fight(player1, player2, playerHealth, player2Health) {
         break;
       }
     } else {
-      playerHealth = attackPlayer(player1Heatlh);
+      player1Health = attackPlayer(player1Heatlh);
       logHealth(player1, player1Health);
       if (isDead(player1Health)) {
         logDeath(player2, player1);
